@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/user_controller.dart';
-// import 'package:app1/screens/screen3.dart';
+import 'package:app1/screens/screen3.dart';
 
 class SecondScreen extends StatelessWidget {
   final userController = Get.find<UserController>();
@@ -35,7 +35,7 @@ class SecondScreen extends StatelessWidget {
                     child: Text(
                       userController.selectedUserName.isEmpty
                           ? "Selected User Name"
-                          : "Selected: ${userController.selectedUserName.value}",
+                          : userController.selectedUserName.value,
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
@@ -49,7 +49,7 @@ class SecondScreen extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      // Get.to(() => ThirdScreen());
+                      Get.to(() => ThirdScreen());
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF4682A9),
