@@ -1,7 +1,7 @@
 import 'package:app1/controllers/user_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-// import 'screen2.dart';
+import 'screen2.dart';
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({super.key});
@@ -118,7 +118,7 @@ class _FirstScreenState extends State<FirstScreen> {
                         return;
                       }
                       userController.setUserName(name);
-                      // Get.to(() => const SecondScreen());
+                      Get.to(() => SecondScreen());
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF4682A9),
